@@ -1,0 +1,117 @@
+.home-container {
+  padding: 0 20px 20px;
+}
+
+.hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url('https://img.freepik.com/free-photo/education-learning-knowledge-banner-frame_53876-120880.jpg?t=st=1724992940~exp=1724996540~hmac=be24ac8778722418e728f23e7ccd2d938486e15d977cb6d068c19400c416e58e&w=996'); /* Make sure the path is correct */
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 50px;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 128, 185, 0.3); /* Blue transparent overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-section, .how-it-works-section, .join-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #2980b9;
+  margin-bottom: 30px;
+}
+
+.features-grid, .steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .features-grid, .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card, .step-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.feature-card:hover, .step-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon, .step-icon {
+  font-size: 3em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.feature-title, .step-title {
+  font-size: 1.75em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.feature-text, .step-text {
+  font-size: 1.1em;
+  color: #7f8c8d;
+}
+
+.join-section .join-text {
+  font-size: 1.3em;
+  color: #34495e;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.join-button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.join-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}

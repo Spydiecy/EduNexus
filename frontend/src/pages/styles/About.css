@@ -1,0 +1,124 @@
+.about-container {
+  padding: 0 20px 20px; /* Adjusted to account for hero image */
+}
+
+.about-hero {
+  position: relative;
+  height: 400px;
+  background-image: url('https://img.freepik.com/free-photo/top-view-coworkers-team-working-office_329181-12379.jpg?t=st=1724992002~exp=1724995602~hmac=b015b1aefc982bbb59fc217d800bec754ce1a4d5a03b8469a3ce397f604adf4a&w=996'); /* Replace with your hero image path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 128, 185, 0.3); /* Blue transparent overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-subtitle {
+  font-size: 1.5em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mission-section, .values-section, .team-section, .contact-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.mission-text {
+  font-size: 1.3em;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-grid, .team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .values-grid, .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.value-card, .team-member {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.value-card:hover, .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  font-size: 3em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.value-title, .team-name {
+  font-size: 1.75em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.value-text, .team-role {
+  font-size: 1.1em;
+  color: #7f8c8d;
+}
+
+.team-image {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.contact-text {
+  font-size: 1.3em;
+  color: #34495e;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.contact-button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}

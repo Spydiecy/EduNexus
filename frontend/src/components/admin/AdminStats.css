@@ -1,0 +1,49 @@
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stats-box {
+  background-color: #1a202c;
+  color: #edf2f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 220px; /* Increase height to fill blank space */
+}
+
+.stats-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stats-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #63b3ed;
+}
+
+.stats-box h3 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.stats-box p {
+  margin: 10px 0;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.stats-description {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #a0aec0;
+}

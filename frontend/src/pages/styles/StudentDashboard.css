@@ -1,0 +1,78 @@
+/* src/pages/styles/StudentDashboard.css */
+.student-dashboard {
+    display: flex;
+    min-height: 60vh;
+    background-color: #f9f9f9;
+  }
+  
+  .student-sidebar {
+    width: 250px;
+    background-color: #1a202c;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .student-sidebar ul li {
+    margin-bottom: 15px;
+    color: #edf2f7;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .student-sidebar ul li:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .student-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .student-function {
+    background-color: #1a202c;
+    color: #edf2f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .student-function h2 {
+    margin-bottom: 20px;
+  }
+  
+  .student-function input,
+  .student-function textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .student-function button {
+    padding: 10px 20px;
+    background-color: #3182ce;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .student-function button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .student-function p {
+    margin-top: 10px;
+    color: #2c3e50;
+  }
+  

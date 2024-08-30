@@ -1,0 +1,37 @@
+/* src/components/organization/Profile.css */
+.profile-box {
+    background-color: #1a202c;
+    color: #edf2f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .profile-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-box p {
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    color: #63b3ed;
+    font-size: 1.2em;
+  }

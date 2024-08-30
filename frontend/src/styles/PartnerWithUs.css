@@ -1,0 +1,104 @@
+.partner-container {
+  padding: 0 20px 20px; /* Adjusted to account for hero image */
+}
+
+.partner-hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url('https://img.freepik.com/free-photo/two-confident-business-man-shaking-hands-meeting-office-success-dealing-greeting-partner-concept_1423-185.jpg?t=st=1724993711~exp=1724997311~hmac=312039880f46bd84c44bcf9f5b0d576c55f4753e32e5716703c472d7e19f5524&w=996'); /* Replace with your hero image path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 128, 185, 0.3); /* Blue transparent overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.partner-heading-primary {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.partner-text {
+  font-size: 1.5em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.partner-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .partner-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.partner-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px);
+}
+
+.partner-icon {
+  font-size: 3em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.partner-card-title {
+  font-size: 1.75em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.partner-card-text {
+  font-size: 1.1em;
+  color: #7f8c8d;
+}
+
+.partner-button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.partner-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}

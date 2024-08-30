@@ -1,0 +1,57 @@
+/* src/components/student/ViewAppliedScholarships.css */
+.view-applied-scholarships-box {
+  background-color: #1a202c;
+  color: #edf2f7;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view-applied-scholarships-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-applied-scholarships-box p {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.applied-scholarship-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.applied-scholarship-list li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  background-color: #2d3748;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #63b3ed;
+  font-size: 1.2em;
+}
+
+.info-text {
+  font-size: 1em;
+  color: #cbd5e0;
+  margin-bottom: 20px;
+}

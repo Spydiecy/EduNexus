@@ -1,0 +1,245 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Main layout container */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.main-header {
+  background-color: #1a202c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 10vh;
+  align-content: center;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header-left {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.header-right {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-header .logo a {
+  font-size: 1.5em;
+  color: #edf2f7;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.main-header .logo img {
+  margin-right: 8px;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-nav ul li a {
+  color: #edf2f7;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #63b3ed;
+}
+
+.btn-primary {
+  background-color: #3182ce;
+  padding: 6px 12px;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.btn-primary:hover {
+  background-color: #2b6cb0;
+}
+
+/* Dashboard and logout button styles */
+.dashboard-button, .logout-button {
+  color: #edf2f7;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 25px;
+  font-weight: 500;
+  background-color: #3182ce;
+  text-decoration: none;
+}
+
+.dashboard-button:hover, .logout-button:hover {
+  background-color: #2b6cb0;
+  color: #fff;
+}
+
+.dashboard-icon, .logout-icon {
+  font-size: 1.2em;
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer styles */
+.main-footer {
+  background-color: #1a202c;
+  color: #edf2f7;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.footer-text {
+  margin-left: 20px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.footer-nav ul li a {
+  color: #edf2f7;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footer-nav ul li a:hover {
+  color: #63b3ed;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .header-left, .header-right {
+    position: static;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .header-center {
+    margin-top: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dashboard-button, .logout-button {
+    font-size: 0.9em;
+    padding: 5px 8px;
+  }
+
+  .main-header .logo a {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header .container {
+    padding: 5px;
+  }
+
+  .header-left {
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dashboard-button, .logout-button {
+    font-size: 0.8em;
+    padding: 4px 6px;
+  }
+
+  .main-header .logo a {
+    font-size: 1em;
+  }
+}
