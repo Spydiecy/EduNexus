@@ -20,14 +20,21 @@ const LoginPage = () => {
         try {
           // Fetch the user's profile from the smart contract
           const profile = await scholarshipPlatform.methods.profiles(account).call();
-          
-          // Check if the user has the admin role or the specific address
-          if (profile.role === ADMIN_ROLE || account.toLowerCase() === ADMIN_ADDRESS.toLowerCase()) {
-            console.log('Admin detected, redirecting to admin panel...');
-            navigate('/admin-dashboard', { state: { account } });
+
+          // Check if the user is registered (i.e., has a role)
+          if (profile.role && profile.role !== '') {
+            // Check if the user has the admin role or the specific address
+            if (profile.role === ADMIN_ROLE || account.toLowerCase() === ADMIN_ADDRESS.toLowerCase()) {
+              console.log('Admin detected, redirecting to admin panel...');
+              navigate('/admin-dashboard', { state: { account } });
+            } else {
+              console.log('User is not admin, redirecting to dashboard...');
+              navigate('/student-dashboard', { state: { account } });
+            }
           } else {
-            console.log('User is not admin, redirecting to dashboard...');
-            navigate('/student-dashboard', { state: { account } });
+            // If no role is set, redirect to the RegisterPage
+            console.log('Unregistered user, redirecting to register page...');
+            navigate('/register', { state: { account } });
           }
         } catch (error) {
           console.error('Error checking user role:', error);
