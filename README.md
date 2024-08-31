@@ -93,7 +93,7 @@ Students can browse available scholarships, apply for them, and track the status
 - **React.js**: The front-end library used for building the user interface.
 - **MetaMask**: A browser extension for managing Open Campus EduChain accounts and transactions.
 
-![Technology Stack Overview](path/to/technology-stack-screenshot.png)
+![image](https://github.com/user-attachments/assets/492f64fd-8bfb-4a27-afd0-49c66d31a04b)
 
 ## User Flow
 
