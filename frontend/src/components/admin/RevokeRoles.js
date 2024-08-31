@@ -11,7 +11,7 @@ const RevokeRoles = () => {
 
   const roleOptions = {
     Admin: '0x0000000000000000000000000000000000000000000000000000000000000000',
-    Organization: scholarshipPlatform.methods.ORGANIZATION_ROLE().call(),
+    Organization: '0xe0ae735793555d3fe7bb9c3f6f29e053c01c45cee237096b99b73ac619531dfb',
   };
 
   const handleRevokeRole = async () => {

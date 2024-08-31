@@ -1,6 +1,4 @@
-// src/components/student/ApplyScholarship.js
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import scholarshipPlatform from '../../scholarshipPlatform';
@@ -10,10 +8,41 @@ const ApplyScholarship = () => {
   const [scholarshipId, setScholarshipId] = useState('');
   const [reason, setReason] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
+  const [appliedScholarshipIds, setAppliedScholarshipIds] = useState([]);
+
+  useEffect(() => {
+    const fetchAppliedScholarships = async () => {
+      try {
+        const account = window.ethereum.selectedAddress;
+        if (!account) {
+          setStatusMessage('No account found. Please connect MetaMask.');
+          return;
+        }
+
+        // Fetch the user profile
+        const userProfile = await scholarshipPlatform.methods.profiles(account).call();
+
+        // Ensure appliedScholarships is defined and is an array
+        const appliedIds = userProfile.appliedScholarships ? userProfile.appliedScholarships.map(id => id.toString()) : [];
+        setAppliedScholarshipIds(appliedIds);
+      } catch (error) {
+        setStatusMessage(`Error fetching applied scholarships: ${error.message}`);
+      }
+    };
+
+    fetchAppliedScholarships();
+  }, []);
 
   const handleApply = async () => {
+    const parsedScholarshipId = scholarshipId.trim();
+    
+    if (appliedScholarshipIds.includes(parsedScholarshipId)) {
+      setStatusMessage('You have already applied for this scholarship.');
+      return;
+    }
+
     try {
-      await scholarshipPlatform.methods.applyForScholarship(scholarshipId, reason).send({ from: window.ethereum.selectedAddress });
+      await scholarshipPlatform.methods.applyForScholarship(parsedScholarshipId, reason).send({ from: window.ethereum.selectedAddress });
       setStatusMessage('Applied for scholarship successfully!');
     } catch (error) {
       setStatusMessage(`Application failed: ${error.message}`);

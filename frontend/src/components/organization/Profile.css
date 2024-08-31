@@ -1,6 +1,6 @@
-/* src/components/organization/Profile.css */
+/* src/components/student/Profile.css */
 .profile-box {
-    background-color: #1a202c;
+  background-color: #1a202c;
     color: #edf2f7;
     padding: 30px;
     border-radius: 10px;
@@ -14,24 +14,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  
-  .profile-box h2 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-box p {
-    margin-bottom: 15px;
-    font-size: 1em;
-  }
-  
-  .icon {
-    margin-right: 10px;
-    color: #63b3ed;
-    font-size: 1.2em;
-  }
+}
+
+.profile-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-box p {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #63b3ed;
+  font-size: 1.2em;
+}
+
+.info-text {
+  font-size: 1em;
+  color: #cbd5e0;
+  margin-bottom: 20px;
+  text-align: center;
+}

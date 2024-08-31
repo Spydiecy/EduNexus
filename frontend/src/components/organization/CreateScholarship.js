@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 const CreateScholarship = () => {
-  const [amountInEth, setAmountInEth] = useState(''); // Amount in ETH
+  const [amountInEth, setAmountInEth] = useState(''); // Amount in EDU
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -34,7 +34,7 @@ const CreateScholarship = () => {
   const handleCreateScholarship = async () => {
     try {
       const web3 = new Web3(window.ethereum);
-      const amountInWei = web3.utils.toWei(amountInEth, 'ether'); // Convert ETH to Wei
+      const amountInWei = web3.utils.toWei(amountInEth, 'ether'); // Convert EDU to Wei
 
       await scholarshipPlatform.methods
         .addScholarship(
@@ -64,90 +64,92 @@ const CreateScholarship = () => {
         Create Scholarship
       </h2>
       <p className="info-text">
-        Use this form to create a new scholarship. Please provide all the necessary details including scholarship amount in Ether, description, category, start date, end date, maximum approvals, and any additional requirements.
+        Use this form to create a new scholarship. Please provide all the necessary details including scholarship amount in EDU, description, category, start date, end date, maximum approvals, and any additional requirements.
       </p>
-      <input
-        type="text"
-        placeholder="Scholarship Amount (in EDU)"
-        value={amountInEth}
-        onChange={(e) => setAmountInEth(e.target.value)}
-        className="input-field"
-        required
-      />
-      <input
-        type="text"
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        className="input-field"
-        required
-      />
-      <select
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        className="input-field"
-        required
-      >
-        <option value="" disabled>Select Category</option>
-        <option value="0">College</option>
-        <option value="1">School</option>
-        <option value="2">Project</option>
-        <option value="3">Work</option>
-        <option value="4">Research</option>
-      </select>
-      <input
-        type="date"
-        placeholder="Start Date"
-        value={startDate}
-        onChange={(e) => setStartDate(e.target.value)}
-        className="input-field"
-        required
-      />
-      <input
-        type="date"
-        placeholder="End Date"
-        value={endDate}
-        onChange={(e) => setEndDate(e.target.value)}
-        className="input-field"
-        required
-      />
-      <input
-        type="number"
-        placeholder="Max Approvals"
-        value={maxApprovals}
-        onChange={(e) => setMaxApprovals(e.target.value)}
-        className="input-field"
-        required
-      />
-      <div className="requirements-section">
-        <h3>Additional Requirements</h3>
-        {requirements.map((requirement, index) => (
-          <div key={index} className="requirement-item">
-            <input
-              type="text"
-              placeholder="Requirement"
-              value={requirement}
-              onChange={(e) => handleRequirementChange(index, e.target.value)}
-              className="input-field"
-              required
-            />
-            <button
-              type="button"
-              onClick={() => handleRemoveRequirement(index)}
-              className="remove-button"
-            >
-              Remove
-            </button>
-          </div>
-        ))}
-        <button type="button" onClick={handleAddRequirement} className="add-button">
-          Add Requirement
+      <div className="create-scholarship-form">
+        <input
+          type="text"
+          placeholder="Scholarship Amount (in EDU)"
+          value={amountInEth}
+          onChange={(e) => setAmountInEth(e.target.value)}
+          className="input-field"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="input-field"
+          required
+        />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="input-field"
+          required
+        >
+          <option value="" disabled>Select Category</option>
+          <option value="0">College</option>
+          <option value="1">School</option>
+          <option value="2">Project</option>
+          <option value="3">Work</option>
+          <option value="4">Research</option>
+        </select>
+        <label className="date-label">Start Date</label>
+        <input
+          type="date"
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+          className="input-field"
+          required
+        />
+        <label className="date-label">End Date</label>
+        <input
+          type="date"
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+          className="input-field"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Max Approvals"
+          value={maxApprovals}
+          onChange={(e) => setMaxApprovals(e.target.value)}
+          className="input-field"
+          required
+        />
+        <div className="requirements-section">
+          <h3>Additional Requirements</h3>
+          {requirements.map((requirement, index) => (
+            <div key={index} className="requirement-item">
+              <input
+                type="text"
+                placeholder="Requirement"
+                value={requirement}
+                onChange={(e) => handleRequirementChange(index, e.target.value)}
+                className="input-field"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => handleRemoveRequirement(index)}
+                className="remove-button"
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+          <button type="button" onClick={handleAddRequirement} className="add-button">
+            Add Requirement
+          </button>
+        </div>
+        <button onClick={handleCreateScholarship} className="primary-button">
+          <FontAwesomeIcon icon={faPlusCircle} className="button-icon" />
+          Create Scholarship
         </button>
       </div>
-      <button onClick={handleCreateScholarship} className="primary-button">
-        <FontAwesomeIcon icon={faPlusCircle} className="button-icon" />
-        Create Scholarship
-      </button>
       <p className="status-message">{statusMessage}</p>
     </div>
   );

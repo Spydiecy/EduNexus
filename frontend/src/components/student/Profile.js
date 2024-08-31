@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import scholarshipPlatform from '../../scholarshipPlatform';
-import './Profile.css';
+import './ProfileStudent.css';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);

@@ -15,14 +15,15 @@ const AdminStats = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        // Fetch total application count, default to zero if undefined
-        const totalApplications = await scholarshipPlatform.methods.applicationCount().call() || 0;
+        // Fetch total application count
+        const totalApplications = await scholarshipPlatform.methods.applicationCount().call();
         console.log("Total Applications:", totalApplications);
 
-        // Fetch all profiles (Assuming you have an address list or a way to fetch all profiles)
+        // Addresses of organizations
         const profileAddresses = [
-          '0x0d1d649753155e2903e80b89201FFF09E238Eb3B', // Replace with actual addresses
-          '0xAAfAf3D8df9D16f9d7B5dC12684440777C492dbd', // Replace with actual addresses
+          '0x0d1d649753155e2903e80b89201FFF09E238Eb3B',
+          '0xAAfAf3D8df9D16f9d7B5dC12684440777C492dbd',
+          // Add more addresses as needed
         ];
 
         let totalScholarships = 0;
@@ -40,13 +41,15 @@ const AdminStats = () => {
           } else if (profile.role === "Organization") {
             totalOrganizations++;
             if (profile.verified) {
-              totalScholarships += profile.createdScholarships.length;
+              const scholarshipIds = await scholarshipPlatform.methods.getOrganizationScholarships(address).call();
+              totalScholarships += scholarshipIds.length;
+              console.log(`Organization ${address} has ${scholarshipIds.length} scholarships.`);
             }
           }
         }
 
         setStats({
-          totalApplications,
+          totalApplications: totalApplications.toString(),
           totalStudents,
           totalOrganizations,
           totalScholarships,
@@ -55,10 +58,10 @@ const AdminStats = () => {
         console.error("Error fetching stats:", error);
         // Set default stats in case of an error
         setStats({
-          totalApplications: 0,
-          totalStudents: 0,
-          totalOrganizations: 0,
-          totalScholarships: 0,
+          totalApplications: "Error",
+          totalStudents: "Error",
+          totalOrganizations: "Error",
+          totalScholarships: "Error",
         });
       }
     };

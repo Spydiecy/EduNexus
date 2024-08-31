@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faCheckCircle, faTimesCircle, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import Web3 from 'web3';
 import scholarshipPlatform from '../../scholarshipPlatform';
 import './Profile.css';
 
 const Profile = () => {
-  const [profile, setProfile] = useState(null); // Initialize state to null
+  const [profile, setProfile] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -30,26 +33,32 @@ const Profile = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading profile...</div>;
+    return <div className="loading-message">Loading profile...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error-message">Error: {error}</div>;
   }
 
   return (
     <div className="profile-box">
-      <h2>Profile</h2>
+      <h2><FontAwesomeIcon icon={faUser} className="icon" /> Profile</h2>
       {profile ? (
-        <div>
-          <p><strong>Name:</strong> {profile.name}</p>
-          <p><strong>Role:</strong> {profile.role}</p>
-          <p><strong>Email:</strong> {profile.email}</p>
-          <p><strong>Verified:</strong> {profile.verified ? 'Yes' : 'No'}</p>
-          <p><strong>Created Scholarships:</strong> {profile.createdScholarships ? profile.createdScholarships.length : 0}</p>
+        <div className="profile-details">
+          <p><FontAwesomeIcon icon={faUser} className="icon" /> <strong>Name:</strong> {profile.name}</p>
+          <p><FontAwesomeIcon icon={faGraduationCap} className="icon" /> <strong>Role:</strong> {profile.role}</p>
+          <p><FontAwesomeIcon icon={faEnvelope} className="icon" /> <strong>Email:</strong> {profile.email}</p>
+          <p>
+            <FontAwesomeIcon icon={profile.verified ? faCheckCircle : faTimesCircle} className="icon" />
+            <strong>Verified:</strong> {profile.verified ? 'Yes' : 'No'}
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faGraduationCap} className="icon" />
+            <strong>Created Scholarships:</strong> {profile.createdScholarships ? profile.createdScholarships.length : 0}
+          </p>
         </div>
       ) : (
-        <p>No profile data available.</p>
+        <p className="no-data-message">No profile data available.</p>
       )}
     </div>
   );

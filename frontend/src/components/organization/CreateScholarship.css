@@ -9,7 +9,6 @@
   width: 100%;
   margin: 20px auto;
   text-align: left;
-  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +37,11 @@
   font-size: 1em;
   background-color: #2d3748;
   color: #edf2f7;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #63b3ed;
 }
 
 .requirements-section {
@@ -100,6 +104,7 @@
   font-size: 1em;
   font-weight: 600;
   color: #63b3ed;
+  text-align: center;
 }
 
 .icon {
@@ -108,8 +113,13 @@
   font-size: 1.2em;
 }
 
-.info-text {
+.date-label {
   font-size: 1em;
   color: #cbd5e0;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.create-scholarship-form {
+  text-align: center;
 }
