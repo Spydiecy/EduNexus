@@ -5,7 +5,7 @@
 .hero-section {
   position: relative;
   height: 400px;
-  background-image: url('https://img.freepik.com/free-photo/education-learning-knowledge-banner-frame_53876-120880.jpg?t=st=1724992940~exp=1724996540~hmac=be24ac8778722418e728f23e7ccd2d938486e15d977cb6d068c19400c416e58e&w=996'); /* Make sure the path is correct */
+  background-image: url('../../images/home-hero.png'); 
   background-size: cover;
   background-position: bottom;
   margin-bottom: 50px;

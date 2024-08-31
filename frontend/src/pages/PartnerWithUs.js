@@ -5,6 +5,10 @@ import { faBullhorn, faHandshake, faChartLine, faClipboardList, faUsers, faCogs 
 import "../styles/PartnerWithUs.css";
 
 const PartnerWithUs = () => {
+  const buttonClick = () => {
+    window.location.href = "/login";
+  }
+
   return (
     <MainLayout>
       <div className="partner-container">
@@ -83,7 +87,7 @@ const PartnerWithUs = () => {
           <p className="partner-text max-w-3xl mx-auto">
             Join EduNexus today and be a part of a global initiative to make education accessible to everyone.
           </p>
-          <button className="partner-button">Become a Partner</button>
+          <button onClick={buttonClick} className="partner-button">Become a Partner</button>
         </section>
       </div>
     </MainLayout>

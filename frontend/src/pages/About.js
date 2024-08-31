@@ -6,6 +6,10 @@ import "./styles/About.css";
 import me from "../images/me.jpg";
 
 const About = () => {
+  const buttonClick = () => {
+    window.location.href = "/contact";
+  }
+
   return (
     <MainLayout>
       <div className="about-container">
@@ -72,7 +76,7 @@ const About = () => {
           <p className="contact-text">
             Whether you have a question or want to collaborate with us, we’d love to hear from you. Reach out to us anytime!
           </p>
-          <button className="contact-button">Contact Us</button>
+          <button onClick={buttonClick} className="contact-button">Contact Us</button>
         </section>
       </div>
     </MainLayout>

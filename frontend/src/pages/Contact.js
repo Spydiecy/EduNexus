@@ -23,21 +23,21 @@ const Contact = () => {
               <FontAwesomeIcon icon={faEnvelope} className="contact-info-icon" />
               <h3 className="contact-info-title">General Inquiries</h3>
               <p className="contact-info-text">
-                Email us at: <a href="mailto:info@edunexus.com" className="contact-link">info@edunexus.com</a>
+                Email us at: <a href="mailto:info@edunexus.com" className="contact-link">edunexus.edu@gmail.com</a>
               </p>
             </div>
             <div className="contact-info-item">
               <FontAwesomeIcon icon={faLifeRing} className="contact-info-icon" />
               <h3 className="contact-info-title">Support</h3>
               <p className="contact-info-text">
-                For support, contact us at: <a href="mailto:support@edunexus.com" className="contact-link">support@edunexus.com</a>
+                For support, contact us at: <a href="mailto:support@edunexus.com" className="contact-link">edunexus.edu@gmail.com</a>
               </p>
             </div>
             <div className="contact-info-item">
               <FontAwesomeIcon icon={faHandshake} className="contact-info-icon" />
               <h3 className="contact-info-title">Partnerships</h3>
               <p className="contact-info-text">
-                Interested in partnering with us? Reach out at: <a href="mailto:partners@edunexus.com" className="contact-link">partners@edunexus.com</a>
+                Interested in partnering with us? Reach out at: <a href="mailto:partners@edunexus.com" className="contact-link">edunexus.edu@gmail.com</a>
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@
 .about-hero {
   position: relative;
   height: 400px;
-  background-image: url('https://img.freepik.com/free-photo/top-view-coworkers-team-working-office_329181-12379.jpg?t=st=1724992002~exp=1724995602~hmac=b015b1aefc982bbb59fc217d800bec754ce1a4d5a03b8469a3ce397f604adf4a&w=996'); /* Replace with your hero image path */
+  background-image: url('../../images/about-hero.png'); /* Replace with your hero image path */
   background-size: cover;
   background-position: center;
   margin-bottom: 50px;

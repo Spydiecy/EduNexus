@@ -7,7 +7,7 @@
 .contact-hero {
   position: relative;
   height: 400px;
-  background-image: url('https://img.freepik.com/free-photo/office-desktop-with-laptop-business-man_23-2148174087.jpg?t=st=1724991631~exp=1724995231~hmac=698915e7a8e5c8afe9a3676adee2ef2e2774b8cc3f1e7d53a9171a4b4e101326&w=996'); /* Replace with your hero image path */
+  background-image: url('../../images/contact-hero.png'); /* Replace with your hero image path */
   background-size: cover;
   background-position: center;
   margin-bottom: 60px;

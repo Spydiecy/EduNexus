@@ -6,6 +6,10 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import "./styles/Home.css";
 
 const Home = () => {
+  const buttonClick = () => {
+    window.location.href = "/login";
+  }
+
   return (
     <MainLayout>
       <main className="home-container">
@@ -77,7 +81,7 @@ const Home = () => {
           <p className="join-text">
             Be part of a growing network of students, educators, and institutions dedicated to making education accessible to everyone. Sign up today to start your journey with EduNexus.
           </p>
-          <button className="join-button">Get Started</button>
+          <button onClick={buttonClick} className="join-button">Get Started</button>
         </section>
       </main>
     </MainLayout>
