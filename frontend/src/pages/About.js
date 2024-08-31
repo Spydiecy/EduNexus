@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faBalanceScale, faShieldAlt } from "@fortawesome/free-solid-svg-icons";
 import "./styles/About.css";
+import me from "../images/me.jpg";
 
 const About = () => {
   return (
@@ -55,19 +56,13 @@ const About = () => {
           <h2 className="section-title">Meet Our Team</h2>
           <div className="team-grid">
             <div className="team-member">
-              <img src="path_to_image" alt="Team Member" className="team-image" />
-              <h3 className="team-name">John Doe</h3>
-              <p className="team-role">CEO & Founder</p>
             </div>
             <div className="team-member">
-              <img src="path_to_image" alt="Team Member" className="team-image" />
-              <h3 className="team-name">Jane Smith</h3>
-              <p className="team-role">CTO & Co-Founder</p>
+              <img src={me} alt="Team Member" className="team-image" />
+              <h3 className="team-name">Tanishq Gupta</h3>
+              <p className="team-role">Creator & Lead Developer</p>
             </div>
             <div className="team-member">
-              <img src="path_to_image" alt="Team Member" className="team-image" />
-              <h3 className="team-name">Alice Johnson</h3>
-              <p className="team-role">Head of Marketing</p>
             </div>
           </div>
         </section>
