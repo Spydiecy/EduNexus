@@ -35,12 +35,12 @@ const Profile = () => {
         Here are the details associated with your account.
       </p>
       {profile ? (
-        <>
+        <div className="profile-details">
           <p><strong>Name:</strong> {profile.name}</p>
           <p><strong>Role:</strong> {profile.role}</p>
           <p><strong>Email:</strong> {profile.email}</p>
           <p><strong>Verified:</strong> {profile.verified ? 'Yes' : 'No'}</p>
-        </>
+        </div>
       ) : (
         <p>{statusMessage}</p>
       )}
