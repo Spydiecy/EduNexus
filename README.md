@@ -2,11 +2,11 @@
 
 Welcome to **EduNexus**, a decentralized platform designed to revolutionize the scholarship application and distribution process. Built on the Open Campus EduChain, EduNexus leverages blockchain technology to provide transparency, fairness, and efficiency in awarding scholarships to deserving students.
 
-![image](https://github.com/user-attachments/assets/5dfe5d5d-875a-4545-baec-d9d7bcb78339)
+![image](https://github.com/user-attachments/assets/b259712e-5098-47e0-abea-6ad08be2fc6e)
 
 ## Overview
 
-The Scholarship Platform DApp is a decentralized application (DApp) built on the Open Campus Educhain, designed to facilitate the creation, application, and management of scholarships. This platform provides an efficient, transparent, and secure environment for organizations to offer scholarships and for students to apply for them. By leveraging blockchain technology, the Scholarship Platform ensures that every transaction is immutable, transparent, and accessible to all stakeholders.
+The Scholarship Platform DApp is a decentralized application (DApp) built on the Open Campus EduChain, designed to facilitate the creation, application, and management of scholarships. This platform provides an efficient, transparent, and secure environment for organizations to offer scholarships and for students to apply for them. By leveraging blockchain technology, the Scholarship Platform ensures that every transaction is immutable, transparent, and accessible to all stakeholders.
 
 ![image](https://github.com/user-attachments/assets/1beebe4e-68f2-458a-a8f7-a187c00ebf21)
 
@@ -53,7 +53,7 @@ Students can browse available scholarships, apply for them, and track the status
    - Organizations can withdraw unused funds after the scholarship period ends.
 
 ### 6. **Transparency and Security**
-   - All transactions and operations are recorded on the blockchain, ensuring transparency and immutability.
+   - All transactions and operations are recorded on the Open Campus EduChain, ensuring transparency and immutability.
    - The platform uses smart contracts to automate processes, reducing the risk of manual errors and ensuring that operations are executed as intended.
 
 ![image](https://github.com/user-attachments/assets/00ce4d62-2373-4169-889a-65e55b6d3715)
@@ -64,9 +64,9 @@ Students can browse available scholarships, apply for them, and track the status
    - **Admin Dashboard**: The admin can verify organizations, assign roles, and manage the overall platform.
 
 ### 8. **Blockchain and Smart Contracts**
-   - The entire platform is powered by Solidity smart contracts deployed on the Ethereum blockchain.
+   - The entire platform is powered by Solidity smart contracts deployed on the Open Campus EduChain.
    - The smart contracts handle user registration, scholarship creation, application processing, fund transfers, and feedback collection.
-   - The DApp leverages Web3.js to interact with the Ethereum blockchain, enabling seamless integration with MetaMask for managing transactions.
+   - The DApp leverages Web3.js to interact with the Open Campus EduChain, enabling seamless integration with MetaMask for managing transactions.
 
 ![Smart Contract Overview](path/to/smart-contract-overview.png)
 
@@ -89,9 +89,9 @@ Students can browse available scholarships, apply for them, and track the status
 ## Technology Stack
 
 - **Solidity**: The primary programming language for writing the smart contracts.
-- **Web3.js**: A JavaScript library that interacts with the Ethereum blockchain and smart contracts.
+- **Web3.js**: A JavaScript library that interacts with the Open Campus EduChain and smart contracts.
 - **React.js**: The front-end library used for building the user interface.
-- **MetaMask**: A browser extension for managing Ethereum accounts and transactions.
+- **MetaMask**: A browser extension for managing Open Campus EduChain accounts and transactions.
 
 ![Technology Stack Overview](path/to/technology-stack-screenshot.png)
 
