@@ -3,12 +3,17 @@ import MainLayout from '../layouts/MainLayout';
 import MetaMaskLogin from '../components/MetaMaskLogin';
 import scholarshipPlatform from '../scholarshipPlatform';
 import './styles/RegisterPage.css';
+import { useNavigate } from 'react-router-dom';
+
+const ADMIN_ROLE = '0x0000000000000000000000000000000000000000000000000000000000000000';
+const ADMIN_ADDRESS = '0x2ec8175015Bef5ad1C0BE1587C4A377bC083A2d8';
 
 const RegisterPage = () => {
   const [account, setAccount] = useState(null);
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -23,6 +28,20 @@ const RegisterPage = () => {
       });
 
       alert('User registered successfully!');
+
+      // Fetch the user's profile from the smart contract after registration to check the role
+      const profile = await scholarshipPlatform.methods.profiles(account).call();
+
+      // Redirect user to the correct dashboard based on role
+      if (profile.role === ADMIN_ROLE || account.toLowerCase() === ADMIN_ADDRESS.toLowerCase()) {
+        navigate('/admin-dashboard');
+      } else if (profile.role === 'Organization') {
+        navigate('/organization-dashboard');
+      } else if (profile.role === 'Student') {
+        navigate('/student-dashboard');
+      } else {
+        navigate('/dashboard'); // Default fallback if no role matches
+      }
     } catch (error) {
       console.error('Registration failed:', error.message);
       alert(`Registration failed: ${error.message}`);

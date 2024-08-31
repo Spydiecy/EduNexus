@@ -8,6 +8,7 @@ import ApproveApplication from '../components/organization/ApproveApplication';
 import RejectApplication from '../components/organization/RejectApplication';
 import FetchApplicantProfile from '../components/organization/FetchApplicantProfile';
 import WithdrawUnusedFunds from '../components/organization/WithdrawUnusedFunds';
+import MainLayout from '../layouts/MainLayout';
 import './styles/OrganizationDashboard.css';
 
 const OrganizationDashboard = () => {
@@ -37,23 +38,25 @@ const OrganizationDashboard = () => {
   };
 
   return (
-    <div className="organization-dashboard">
-      <aside className="organization-sidebar">
-        <ul>
-          <li onClick={() => setSelectedFunction('profile')}>Profile</li>
-          <li onClick={() => setSelectedFunction('createScholarship')}>Create Scholarship</li>
-          <li onClick={() => setSelectedFunction('deactivateScholarship')}>Deactivate Scholarship</li>
-          <li onClick={() => setSelectedFunction('updateScholarship')}>Update Scholarship</li>
-          <li onClick={() => setSelectedFunction('approveApplication')}>Approve Application</li>
-          <li onClick={() => setSelectedFunction('rejectApplication')}>Reject Application</li>
-          <li onClick={() => setSelectedFunction('fetchApplicantProfile')}>Fetch Applicant Profile</li>
-          <li onClick={() => setSelectedFunction('withdrawUnusedFunds')}>Withdraw Unused Funds</li>
-        </ul>
-      </aside>
-      <main className="organization-content">
-        {renderContent()}
-      </main>
-    </div>
+    <MainLayout>
+      <div className="organization-dashboard">
+        <aside className="organization-sidebar">
+          <ul>
+            <li onClick={() => setSelectedFunction('profile')}>Profile</li>
+            <li onClick={() => setSelectedFunction('createScholarship')}>Create Scholarship</li>
+            <li onClick={() => setSelectedFunction('deactivateScholarship')}>Deactivate Scholarship</li>
+            <li onClick={() => setSelectedFunction('updateScholarship')}>Update Scholarship</li>
+            <li onClick={() => setSelectedFunction('approveApplication')}>Approve Application</li>
+            <li onClick={() => setSelectedFunction('rejectApplication')}>Reject Application</li>
+            <li onClick={() => setSelectedFunction('fetchApplicantProfile')}>Fetch Applicant Profile</li>
+            <li onClick={() => setSelectedFunction('withdrawUnusedFunds')}>Withdraw Unused Funds</li>
+          </ul>
+        </aside>
+        <main className="organization-content">
+          {renderContent()}
+        </main>
+      </div>
+    </MainLayout>
   );
 };
 

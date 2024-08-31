@@ -1,4 +1,3 @@
-// src/pages/LoginPage.js
 import React, { useContext, useEffect } from 'react';
 import MetaMaskLogin from '../components/MetaMaskLogin';
 import MainLayout from '../layouts/MainLayout';
@@ -27,9 +26,16 @@ const LoginPage = () => {
             if (profile.role === ADMIN_ROLE || account.toLowerCase() === ADMIN_ADDRESS.toLowerCase()) {
               console.log('Admin detected, redirecting to admin panel...');
               navigate('/admin-dashboard', { state: { account } });
-            } else {
-              console.log('User is not admin, redirecting to dashboard...');
+            } else if (profile.role === 'Organization') {
+              console.log('Organization detected, redirecting to organization dashboard...');
+              navigate('/organization-dashboard', { state: { account } });
+            } else if (profile.role === 'Student') {
+              console.log('Student detected, redirecting to student dashboard...');
               navigate('/student-dashboard', { state: { account } });
+            } else {
+              // Fallback to general dashboard if no specific role is found
+              console.log('Unknown role, redirecting to general dashboard...');
+              navigate('/dashboard', { state: { account } });
             }
           } else {
             // If no role is set, redirect to the RegisterPage
